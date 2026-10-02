@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AWS Console (Practice Sandbox)</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="topbar">
+  <div class="logo-box" onclick="navigate('home')">
+    <div class="logo-mark">a</div>
+    <div class="logo-text">AWS Practice Console</div>
+  </div>
+  <div class="topbar-item" onclick="navigate('services-menu')">☰ Services</div>
+  <div id="search-wrap">
+    <input id="search-box" type="text" placeholder="Search for services, features, resources (practice mode — try 'EC2' or 'S3')" oninput="onSearch(this.value)">
+  </div>
+  <div class="topbar-right">
+    <div class="topbar-item" title="This is a local practice sandbox — no real AWS account is used">🔔</div>
+    <div class="topbar-item"><span class="region-dot"></span>
+      <select id="region-select" style="background:transparent;color:#fff;border:none;font-size:13px;cursor:pointer">
+        <option value="us-east-1">US East (N. Virginia) (us-east-1)</option>
+      </select>
+    </div>
+    <div class="topbar-item">practice-account · sandbox-user</div>
+  </div>
+</div>
+
+<div id="app">
+  <div id="sidebar"></div>
+  <div id="main"></div>
+</div>
+
+<div id="toast-wrap"></div>
+
+<script src="js/api.js"></script>
+<script src="js/pages.js"></script>
+<script src="js/core.js"></script>
+</body>
+</html>

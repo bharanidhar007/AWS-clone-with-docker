@@ -1,0 +1,12 @@
+services:
+  aws-sandbox:
+    build: .
+    container_name: aws-console-sandbox
+    ports:
+      - "8080:4000"
+    volumes:
+      - sandbox-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  sandbox-data:
